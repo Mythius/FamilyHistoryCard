@@ -5,6 +5,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Family Card Maker</title>
 	<style>
+		:root{
+			--leftw: 460px;
+		}
 		body{
 			background-color: #444;
 			margin: 0;
@@ -14,7 +17,7 @@
 			left:  0;
 			top: 0;
 			height:  calc( 100% - 80px );
-			width:  450px;
+			width:  var(--leftw);
 			padding: 10px;
 			background-color: #888;
 			box-sizing: border-box;
@@ -25,7 +28,7 @@
 			right:  0;
 			top: 0;
 			height:  100%;
-			width:  calc(100% - 450px);
+			width:  calc(100% - var(--leftw));
 			background-color: #222;
 		}
 		canvas{
@@ -88,7 +91,7 @@
 		}
 		export{
 			position: fixed;
-			width:  450px;
+			width:  var(--leftw);
 			height: 80px;
 			left: 0;
 			bottom: 0;
@@ -104,7 +107,7 @@
 			transform: scale(4) translateX(10px) translateY(-3px);
 		}
 		#frames{
-			left: 340px;
+			left: calc(var(--leftw) - 110px);
 			bottom: 80px;
 			background-color: /*purple*/;
 			position: fixed;
