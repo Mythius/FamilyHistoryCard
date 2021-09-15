@@ -278,6 +278,14 @@
 			});
 		}
 
+
+		obj('#download').on('click',e=>{
+			let a = create('a');
+			a.href = canvas.toDataURL();
+			a.download = 'pictures.png';
+			a.click();
+		});
+
 	</script>
 </body>
 </html>
